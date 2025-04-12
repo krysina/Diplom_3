@@ -75,6 +75,13 @@ public class MainPage {
                 .until(ExpectedConditions.attributeContains(sauceTab, "class", "current"));
     }
 
+    @Step ("Клик раздела Соусы")
+    public void clickSauceTab() {
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(sauceTab));
+        driver.findElement(sauceTab).click();
+    }
+
     @Step ("Успешный переход в раздел Начинки")
     public void switchFillingTab() {
         new WebDriverWait(driver, Duration.ofSeconds(EnvConfig.EXPLICIT_WAIT))
