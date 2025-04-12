@@ -28,13 +28,27 @@ public class ConstructorTest {
     }
 
     @Test
-    @DisplayName("Проверка работы переходов к разделам Конструктора")
-    public void switchTabsTest() {
+    @DisplayName("Проверка работы перехода к разделу Соусы Конструктора")
+    public void switchSauceTabTest() {
         mainPage.openMainPage();
         mainPage.waitMainPageHeader();
         mainPage.switchSauceTab();
-        mainPage.switchBunTab();
-        mainPage.switchFillingTab();
     }
 
+    @Test
+    @DisplayName("Проверка работы перехода к разделу Булки Конструктора")
+    public void switchBunTabTest() {
+        mainPage.openMainPage();
+        mainPage.waitMainPageHeader();
+        mainPage.clickSauceTab();
+        mainPage.switchBunTab();
+    }
+
+    @Test
+    @DisplayName("Проверка работы перехода к разделу Соусы Конструктора")
+    public void switchFillingTabTest() {
+        mainPage.openMainPage();
+        mainPage.waitMainPageHeader();
+        mainPage.switchFillingTab();
+    }
 }
